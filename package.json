@@ -1,0 +1,18 @@
+{
+  "name": "vite-extjs",
+  "type": "module",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "definitions": "https://github.com/ExtTS/definitions.git"
+  }
+}
