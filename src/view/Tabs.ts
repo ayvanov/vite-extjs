@@ -1,5 +1,10 @@
 /// <reference types="vite/client" />
 
+interface Controller extends Ext.app.ViewController {
+    fetchTabsConfig();
+    addTabs(tabsConfig: Map<string, Record<string, any>>): void;
+}
+
 export default Ext.define("App.view.Tabs", {
     extend: "Ext.tab.Panel",
     xtype: "app-tabs",
@@ -12,7 +17,7 @@ export default Ext.define("App.view.Tabs", {
             tabsConfig: new Map(),
         },
     },
-    controller: <Ext.app.ViewController>{
+    controller: <Controller>{
         async fetchTabsConfig() {
             const authUser = import.meta.env.VITE_API_USERNAME;
             const authPasswd = import.meta.env.VITE_API_PASSWD;
