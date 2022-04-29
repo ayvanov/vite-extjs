@@ -1,11 +1,11 @@
-import "./Tabs";
+import tabs from "./Tabs";
 
 export default Ext.define("App.view.Viewport", {
     extend: "Ext.Viewport",
     config: {
         items: [
             {
-                xtype: "app-tabs",
+                xtype: tabs,
                 reference: "tab-panel",
             },
         ],

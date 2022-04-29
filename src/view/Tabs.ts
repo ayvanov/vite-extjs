@@ -2,12 +2,15 @@
 
 interface Controller extends Ext.app.ViewController {
     fetchTabsConfig();
+
     addTabs(tabsConfig: Map<string, Record<string, any>>): void;
 }
 
-export default Ext.define("App.view.Tabs", {
+const xtype = "app-tabs";
+
+Ext.define("App.view.Tabs", {
     extend: "Ext.tab.Panel",
-    xtype: "app-tabs",
+    xtype,
     listeners: {
         beforerender: "fetchTabsConfig",
     },
@@ -66,3 +69,4 @@ export default Ext.define("App.view.Tabs", {
         },
     },
 });
+export default xtype;
